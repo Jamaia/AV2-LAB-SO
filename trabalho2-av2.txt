@@ -1,3 +1,8 @@
+Jacqueline Amorim Maia
+Matricula: 0050010947
+
+Resposta 1:
+
 #!/bin/bash
 arq=$1
 
@@ -7,3 +12,9 @@ then
 else
   echo -e "arquivo inexistente!!"
 fi
+
+
+Resposta 2:
+
+
+Resposta 3:
