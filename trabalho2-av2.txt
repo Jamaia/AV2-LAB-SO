@@ -1,0 +1,9 @@
+#!/bin/bash
+arq=$1
+
+if [ -e $arq ]
+then
+  echo -e "arquivo existente!!"
+else
+  echo -e "arquivo inexistente!!"
+fi
