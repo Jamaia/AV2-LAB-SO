@@ -6,7 +6,7 @@ Resposta 1:
 #!/bin/bash
 arq=$1
 
-if [ -e $arq ]
+if [ -f $arq ]
 then
   echo -e "arquivo existente!!"
 else
@@ -16,5 +16,62 @@ fi
 
 Resposta 2:
 
+#!/bin/bash
+      echo "Entre com o numero que deseja saber o fatorial:  "
+      read num
+
+      fat=1
+
+      for ((i=1;i<=$num;i++));
+      do
+         fat=$(($fat*$i))
+      done
+
+      echo " $fat eh o fatorial de $num "
+
+
 
 Resposta 3:
+
+#!/bin/bash
+	for i in $(find -size 0k)
+     	do
+       		  echo "$i"
+    	done
+
+
+
+Resposta 4:
+
+#!/bin/bash
+      c=0
+      py=0
+      cont=0
+      txt=0
+
+      for file in $(ls .)
+      do 
+         case "$file" in
+            *.txt)
+               txt=$(( $txt + 1 ))
+               ;;
+            *.c)
+               c=$(( $c + 1 ))
+               ;;
+            *.py)
+               py=$(( $py + 1 ))
+               ;;
+            *.*)
+               cont=$(( $cont + 1 ))
+               ;;  
+        
+         esac
+      done
+      
+      echo "Total de arquivos com a extensão .txt: $txt"
+      echo "Total de arquivos com a extensão .c: $c"
+      echo "Total de arquivos com a extensão .py: $py"
+      echo "Total de arquivos: $(($txt + $c + $py +$cont))"
+    
+
+
